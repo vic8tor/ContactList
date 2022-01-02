@@ -12,11 +12,9 @@ class RandomContactListViewController: UITableViewController {
 
     // MARK: - @IBOutlets
     
-    // MARK: - Public Properties
+    // MARK: - Private Properties
     var persons: [Person] = []
 
-    
-    // MARK: - Private Properties
     
     // MARK: - Initializers
     
@@ -27,14 +25,12 @@ class RandomContactListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(persons.count)
-        return persons.count
+        persons.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "randomCell", for: indexPath)
         let person = persons[indexPath.row]
-        print(persons)
         var content = cell.defaultContentConfiguration()
         
         content.text = person.fullname
@@ -42,8 +38,20 @@ class RandomContactListViewController: UITableViewController {
         
         return cell
     }
-    // MARK: - @IBActions
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailInfoVC = segue.destination as? DetailInfoViewController else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow  else { return }
+        let person = persons[indexPath.row]
+        detailInfoVC.person = person
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
+    
+    
+
     // MARK: - Public Methods
     
     // MARK: - Private Methods

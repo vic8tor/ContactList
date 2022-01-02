@@ -11,7 +11,7 @@ struct Person {
     var phone: String
     var email: String
     var fullname: String {
-        name + "" + surname
+        name + " " + surname
     }
 }
 extension Person {
@@ -39,7 +39,6 @@ extension Person {
             )
             persons.append(person)
         }
-        print(persons)
         return persons
     }
 }

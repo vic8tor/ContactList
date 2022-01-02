@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5748619C2781C96500F53070 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5748619B2781C96500F53070 /* TabBarViewController.swift */; };
+		5748619E2781F5ED00F53070 /* DetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5748619D2781F5ED00F53070 /* DetailInfoViewController.swift */; };
 		57AAAFB5277CEE9900AE1F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AAAFB4277CEE9900AE1F61 /* AppDelegate.swift */; };
 		57AAAFB7277CEE9900AE1F61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AAAFB6277CEE9900AE1F61 /* SceneDelegate.swift */; };
 		57AAAFB9277CEE9900AE1F61 /* RandomContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AAAFB8277CEE9900AE1F61 /* RandomContactListViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		5748619B2781C96500F53070 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		5748619D2781F5ED00F53070 /* DetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoViewController.swift; sourceTree = "<group>"; };
 		57AAAFB1277CEE9900AE1F61 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AAAFB4277CEE9900AE1F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57AAAFB6277CEE9900AE1F61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				57AAAFB8277CEE9900AE1F61 /* RandomContactListViewController.swift */,
 				5748619B2781C96500F53070 /* TabBarViewController.swift */,
+				5748619D2781F5ED00F53070 /* DetailInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5748619E2781F5ED00F53070 /* DetailInfoViewController.swift in Sources */,
 				57AAAFCF277CF20000AE1F61 /* PersonModel.swift in Sources */,
 				57AAAFD8277DDE8900AE1F61 /* DataManager.swift in Sources */,
 				57AAAFB9277CEE9900AE1F61 /* RandomContactListViewController.swift in Sources */,

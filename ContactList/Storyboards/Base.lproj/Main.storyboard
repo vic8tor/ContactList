@@ -11,7 +11,7 @@
         <!--Root View Controller-->
         <scene sceneID="bzC-6P-LlA">
             <objects>
-                <tableViewController id="3Jj-nd-9sQ" sceneMemberID="viewController">
+                <tableViewController id="3Jj-nd-9sQ" customClass="RandomContactListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="JxX-Ek-gmm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,17 +41,41 @@
             </objects>
             <point key="canvasLocation" x="1467" y="-125"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Info View Controller-->
         <scene sceneID="HNS-oW-U6P">
             <objects>
-                <viewController id="0M8-gc-2bU" sceneMemberID="viewController">
+                <viewController id="0M8-gc-2bU" customClass="DetailInfoViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EtA-9n-viA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUb-iS-9SO">
+                                <rect key="frame" x="20" y="159" width="45" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdF-km-ioL">
+                                <rect key="frame" x="20" y="226" width="45" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YT3-rJ-Hix"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cdF-km-ioL" firstAttribute="leading" secondItem="YT3-rJ-Hix" secondAttribute="leading" constant="20" id="FtK-D8-OLw"/>
+                            <constraint firstItem="JUb-iS-9SO" firstAttribute="leading" secondItem="YT3-rJ-Hix" secondAttribute="leading" constant="20" id="Pps-1X-PKs"/>
+                            <constraint firstItem="cdF-km-ioL" firstAttribute="top" secondItem="JUb-iS-9SO" secondAttribute="bottom" constant="43" id="TJB-6v-s7p"/>
+                            <constraint firstItem="JUb-iS-9SO" firstAttribute="top" secondItem="YT3-rJ-Hix" secondAttribute="top" constant="71" id="xSr-81-uxi"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kwm-CZ-mk0"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="JUb-iS-9SO" id="nsk-nz-O46"/>
+                        <outlet property="phoneNumberLabel" destination="cdF-km-ioL" id="9P3-GF-KIB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fr-Dk-GUq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
